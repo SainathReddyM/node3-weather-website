@@ -1,5 +1,3 @@
-console.log("client side javascript code");
-
 const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 const loading = document.querySelector("#loading");
