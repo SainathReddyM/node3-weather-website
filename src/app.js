@@ -7,6 +7,8 @@ const forecast = require("./utils/forecast");
 const responseBuilder = require("./utils/responseBuilder");
 
 const app = express();
+const port = process.env.PORT || 3000;
+
 const publicDirectoryPath = path.join(__dirname, "../public");
 const templateDirectory = path.join(__dirname, "../templates/views");
 const partialsDirectory = path.join(__dirname, "../templates/partials");
@@ -69,6 +71,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("App has started at port 3000!");
+app.listen(port, () => {
+  console.log("App has started at port " + port);
 });
